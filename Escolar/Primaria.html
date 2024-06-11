@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autobiografía - Primaria</title>
+    <link rel="icon" type="image/png" href="Resorce/OB1.png">
+    <!-- External CSS stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            overflow-x: hidden; /* Allows vertical scrolling but not horizontal */
+            padding-top: 70px; /* Adds space at the top to prevent content from overlapping with fixed elements */
+        }
+    
+        /* Hobby list styles */
+        .hobby li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+    
+        .hobby li .emoji {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+    
+        /* Canvas styles */
+        canvas {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    
+        /* Container styles */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+    
+        /* Title styles */
+        .title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+    
+        /* Anecdote and activities styles */
+        .anecdote, .activities {
+            margin-bottom: 20px;
+        }
+    
+        /* Photo styles */
+        .photo {
+            text-align: center;
+        }
+    
+        .photo img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    
+        /* Back to home link styles */
+        .back-to-home a {
+            color: #fff;
+            text-decoration: none;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .back-to-home a:hover {
+            background-color: #555;
+        }
+    </style>    
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container" data-aos="fade-up">
+        <div class="title">Primaria</div>
+    
+        <!-- Anecdote section -->
+        <div class="anecdote" data-aos="fade-right">
+            <h2>Anécdota</h2>
+            <p>Compré 9 mil pesos en gemas para el juego Shark Evolution y se las cobraron a mi papá</p>
+        </div>
+        
+        <!-- Activities section -->
+        <div class="activities" data-aos="fade-left">
+            <h2>Mis Pasatiempos Favoritos</h2>
+            <ul class="hobby">
+                <li><span class="emoji">🚲</span> Salir con mis amigos</li>
+                <li><span class="emoji">🎮</span> Jugar</li>
+                <li><span class="emoji">🎥</span> Ver videos</li>
+            </ul>
+        </div>
+        
+        <!-- Photo section -->
+        <div class="photo" data-aos="zoom-in">
+            <h2>Fotografía</h2>
+            <img src="Resorce/Kinder_2.png" alt="Imagen">
+        </div>
+    </div>
+
+    <!-- External JavaScript libraries -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 200,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": ["#ff0000", "#00ff00", "#0000ff"] // Array of various colors
+                },
+                "shape": {     
+                    "type": "image",
+                    "image": {
+                    "src": "Resorce/OB3.png",
+                    "width": 400,
+                    "height": 300
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 100,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": false,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": false,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+        
+        // Scroll to top of the page on beforeunload event
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+        
+        // Initialize AOS library
+        AOS.init();
+    </script>
+</body>
+</html>
