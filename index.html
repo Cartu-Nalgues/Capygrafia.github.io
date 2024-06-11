@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autobiografía</title>
+    <link rel="icon" type="image/png" href="Escolar/Resorce/OB1.png">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', cursive; /* Manteniendo la fuente original */
+            background-color: #f3f3f3;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: center; /* Centrado horizontal de todo el contenido */
+            justify-content: center; /* Centrado vertical de todo el contenido */
+            padding: 20px; /* Añade padding para no pegar el contenido a los bordes */
+        }
+        .frame {
+            width: 100%; /* Control de la anchura de los iframes */
+            flex-grow: 1;
+            overflow: hidden;
+            border: none;
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más marcada para mayor profundidad */
+            background-color: #fff; /* Fondo blanco */
+            margin: 10px; /* Margen entre los frames */
+        }
+        .frame_i {
+            width: 100%; /* Control de la anchura de los iframes */
+            flex-grow: 5;
+            overflow: hidden;
+            border: none;
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más marcada para mayor profundidad */
+            background-color: #fff; /* Fondo blanco */
+            margin: 10px; /* Margen entre los frames */
+        }
+        /* Añadiendo un poco más de estética al título de la página */
+        header {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+            color: #333; /* Color de texto más oscuro para mejor contraste */
+            font-size: 2em; /* Tamaño de letra más grande */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <iframe class="frame" name="menu" src="Inicio.html"></iframe>
+        <iframe class="frame_i" name="contenido" src="Deep_Main/Animacion.html"></iframe>
+    </div>
+</body>
+</html>
