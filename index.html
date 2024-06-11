@@ -3,82 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú de Navegación</title>
+    <title>Autobiografía</title>
+    <link rel="icon" type="image/png" href="Escolar/Resorce/OB1.png">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        body, html {
+            height: 100%;
             margin: 0;
-            padding: 0;
+            font-family: 'Roboto', cursive; /* Manteniendo la fuente original */
+            background-color: #f3f3f3;
         }
-        nav {
-            background-color: #333;
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: center; /* Centrado horizontal de todo el contenido */
+            justify-content: center; /* Centrado vertical de todo el contenido */
+            padding: 20px; /* Añade padding para no pegar el contenido a los bordes */
+        }
+        .frame {
+            width: 100%; /* Control de la anchura de los iframes */
+            flex-grow: 1;
             overflow: hidden;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex; /* Add this line */
-            justify-content: center; /* Add this line */
-        }
-        nav ul li {
-            float: left;
-        }
-        nav ul li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav ul li a:hover, nav ul li:hover > a {
-            background-color: #111;
-        }
-        nav ul li ul.sub-menu {
-            display: none;
-            position: absolute;
-            background-color: #333;
-            min-width: 160px;
-            z-index: 1;
-        }
-        nav ul li:hover ul.sub-menu {
-            display: block;
-        }
-        nav ul li ul.sub-menu li {
-            float: none;
-        }
-        nav ul li ul.sub-menu li a {
-            padding: 12px 16px;
-        }
-        iframe {
-            width: 100%;
-            height: calc(100vh - 50px); /* Adjust height based on the menu height */
             border: none;
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más marcada para mayor profundidad */
+            background-color: #fff; /* Fondo blanco */
+            margin: 10px; /* Margen entre los frames */
+        }
+        .frame_i {
+            width: 100%; /* Control de la anchura de los iframes */
+            flex-grow: 5;
+            overflow: hidden;
+            border: none;
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más marcada para mayor profundidad */
+            background-color: #fff; /* Fondo blanco */
+            margin: 10px; /* Margen entre los frames */
+        }
+        /* Añadiendo un poco más de estética al título de la página */
+        header {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+            color: #333; /* Color de texto más oscuro para mejor contraste */
+            font-size: 2em; /* Tamaño de letra más grande */
         }
     </style>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="Deep_Main/Animacion.html" target="contenido">Inicio</a></li>
-        <li><a href="#">Autobiografía</a>
-            <ul class="sub-menu">
-                <li><a href="Escolar/Bebe.html" target="contenido">Bebé</a></li>
-                <li><a href="Escolar/Kinder.html" target="contenido">Kinder</a></li>
-                <li><a href="Escolar/Primaria.html" target="contenido">Primaria</a></li>
-                <li><a href="Escolar/Secundaria.html" target="contenido">Secundaria</a></li>
-                <li><a href="Escolar/Preparatoria.html" target="contenido">Preparatoria</a></li>
-                <li><a href="Escolar/Universidad.html" target="contenido">Universidad</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Acerca de</a>
-            <ul class="sub-menu">
-                <li><a href="Deep_Main/Comentarios.html" target="contenido">Comentarios</a></li>
-                <li><a href="Deep_Main/Datos_Personales.html" target="contenido">Datos Personales</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
-<iframe name="contenido" src="Deep_Main/Animacion.html"></iframe>
+    <div class="container">
+        <iframe class="frame" name="menu" src="Inicio.html"></iframe>
+        <iframe class="frame_i" name="contenido" src="Deep_Main/Animacion.html"></iframe>
+    </div>
 </body>
 </html>
